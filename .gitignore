@@ -1,0 +1,17 @@
+# Compiled files
+out/
+*.so
+*.o
+
+# Large/generated simulation results
+simulations/results/*.vec
+simulations/results/*.vci
+
+# Local GUI settings
+simulations/.qtenvrc
+
+# Keep the results directory
+!simulations/results/.gitkeep
+
+
+
