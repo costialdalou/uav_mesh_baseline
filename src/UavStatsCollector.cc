@@ -25,8 +25,8 @@ void UavStatsCollector::initialize(int stage)
         packetSentToLowerSignal =
             cComponent::registerSignal("packetSentToLower");
 
-        packetSentToUpperSignal =
-            cComponent::registerSignal("packetSentToUpper");
+    packetSentToUpperSignal =
+        cComponent::registerSignal("packetSentToUpper");
 
 
         // Signals emitted by OUR collector

@@ -1,8 +1,8 @@
 version 3
-run Baseline-0-20260812-17:32:35-49021
+run Baseline-0-20260813-10:15:08-45279
 attr configname Baseline
-attr datetime 20260812-17:32:35
-attr datetimef 20260812-173235
+attr datetime 20260813-10:15:08
+attr datetimef 20260813-101508
 attr experiment Baseline
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network uav_mesh_baseline.simulations.UavMeshBaseline
-attr processid 49021
+attr processid 45279
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -131,6 +131,7 @@ config *.visualizer.interfaceTableVisualizer[0].displayInterfaceTables true
 config *.visualizer.interfaceTableVisualizer[0].format "\"%N %a\""
 config user-interface Cmdenv
 config network uav_mesh_baseline.simulations.UavMeshBaseline
+config *.linkStats.outputFile "\"results/Baseline-0-links.csv\""
 config sim-time-limit 420s
 config result-dir results
 config **.scalar-recording true
@@ -1182,6 +1183,8 @@ par UavMeshBaseline.routingTableRecorder displayStringTextFormat "\"\""
 attr mutable ""
 par UavMeshBaseline.routingTableRecorder enabled true
 par UavMeshBaseline.routingTableRecorder logfile "\"${resultdir}/${configname}-#${runnumber}.rt\""
+par UavMeshBaseline.linkStats typename "\"uav_mesh_baseline.simulations.LinkStatsCollector\""
+par UavMeshBaseline.linkStats outputFile "\"results/Baseline-0-links.csv\""
 par UavMeshBaseline.gcs.ethg$i[0].channel typename "\"ned.IdealChannel\""
 par UavMeshBaseline.gcs.eth[0].phys$o.channel typename "\"ned.IdealChannel\""
 par UavMeshBaseline.gcs.mobility typename "\"inet.mobility.static.StationaryMobility\""
